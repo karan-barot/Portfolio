@@ -72,7 +72,7 @@ body{
  
 .home-container{
   display:grid;
-  grid-template-columns: 15% auto;
+  grid-template-columns: 10% 3fr 2fr;
   .imp-links{
     @extend .flex--center;
     flex-direction: column;
@@ -88,32 +88,19 @@ body{
       }
     }
   }
-  .bio-container{
-    display:grid;
-    grid-template-columns:50% 50%;
-    .bio-text-container{
-      @extend .flex--center--rows;
-      flex-direction: column;
-      h1{
-        font-weight: 1000;
-      }
-      h4 span{
-        color: $theme-color1;
-        font-weight: 1000;
-      }
-      button{
-        @extend .button; 
-        height:45px;
-        width:150px;
-        
-      }
-    }
-    .bio-image-container{
-      @extend .flex--center--column
+  .bio-text-container{
+    @extend .flex--center;
+    flex-direction: column;
+    button{
+      @extend .button;
+      height:50px;
+      width:150px;
     }
   }
-  
-  
+  .bio-image-container{
+    @extend .flex--center;
+
+  }
 }
 .contact-container{
 
@@ -228,34 +215,27 @@ body{
       }
     }
     .sections{
-      height: calc(#{$height}- #{$nav-height} );
       position: absolute;
       top:0;
     }
     .home-container{
-      display:grid;
-      grid-template-columns: auto;
+      display: grid;
+      grid-template-columns:auto;
+      grid-template-rows:50% 50%;
       .imp-links{
-        position:fixed;
+        position:absolute;
+        transform:translateY(50%)
       }
-      .bio-container{
-        display:grid;
-        grid-template-columns: auto;
-        .bio-text-container{
-          grid-row-start: 3;
-          padding: 0;
-          width:100%;
-          display: flex;
-          justify-content:flex-start
-        }
-        .bio-image-container{
-          display:flex;
-          justify-content:center;
-          align-items: center;
-          img{
-            height:400px
-          }
-        }
+      .bio-image-container{
+        grid-row-start: 1;
+        display:flex;
+        justify-content:center;
+        align-items: center;
+        
+      }//
+      .bio-text-container{
+        grid-row-start: 2;
+        display:flex;
       }
     }
     

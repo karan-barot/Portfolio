@@ -19,18 +19,19 @@ export default function Home() {
                 <a href="as"><i class="uil uil-twitter"></i></a>
                 <a href="as"><i className="uil uil-linkedin"></i></a>
             </div>
-            <div className="bio-container">
-                <div className="bio-text-container">
-                    <h4>Hi my name is</h4><span><h1>Karan Barot</h1></span> 
-                    <h4>
-                        And I'm a <span ref={textRef}></span>
-                    </h4>
-                    <button>Contact Me</button>
-                </div>
-                <div className="bio-image-container">
-                    <img src={img} alt="blob-background"/>
-                </div>
+          
+            <div className="bio-text-container">
+                <h4>Hi my name is</h4><span><h1>Karan Barot</h1></span> 
+                <h4>
+                    And I'm a <span ref={textRef}></span>
+                </h4>
+                <button>Contact Me</button>
+            </div>
+            
+            <div className="bio-image-container">
+                <img src={img} alt="blob-background"/>
             </div>
         </div>
+   
     )
 }
