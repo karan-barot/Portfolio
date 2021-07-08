@@ -1,6 +1,21 @@
 import React from 'react'
 
 export default function Contact() {
+
+
+    const palindrome = (str) =>{
+        
+        let s1 = str.split("").reverse().join("")
+        console.log(s1+" "+str)
+        if(s1===str){
+            console.log("palindrome")
+        }
+        else{
+            console.log("not palindrome")
+        }
+    }
+
+    palindrome("karan")
     return (
         <div className="contact-container">
             <form>
