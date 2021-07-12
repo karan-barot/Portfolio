@@ -1,36 +1,25 @@
 import React,{useEffect,useRef} from 'react'
-import img from '../Assets/Images/blob.svg'
+import img from '../Assets/Images/karan.jpeg'
 import {init} from 'ityped'
 export default function Home() {
+    let textref = useRef()
 
-    const textRef = useRef();
-    useEffect(() => {
-        init(textRef.current, { 
-            showCursor: true,
-            strings: ['Fullstack Dveloper', 'Designer' ] 
-        })
-    }, [])
-
+    useEffect(()=>{
+        init(textref.current,{ showCursor: true, strings: ["Web Developer","Web Designer"] });
+    },[])
     return (
         <div className="home-container">
-            <div className="imp-links">
-                <a href="fsh"><i class="uil uil-github"></i></a>
-                <a href="as"><i class="uil uil-fast-mail"></i></a>
-                <a href="as"><i class="uil uil-twitter"></i></a>
-                <a href="as"><i className="uil uil-linkedin"></i></a>
-            </div>
-            <div className="bio-image-container">
-                
-            </div>
-            <div className="bio-text-container">
-                <p>Hi my name is</p><span><h1>Karan Barot</h1></span> 
-                <p>
-                    And I'm a <span ref={textRef}></span>
-                </p>
+            <div className="text-container">
+                <h3>Hey I am</h3>
+                <h1 className="text-title">Karan Barot</h1>
+                <h2>I am a <span ref={textref}></span></h2>
                 <button>Contact Me</button>
             </div>
-            
-            
+            <div className="image-container">
+                <div className="image-box">
+                    <img src=""/>
+                </div>
+            </div>
         </div>
    
     )

@@ -8,12 +8,12 @@ function App() {
   return (
     <div className="app">
         <Navbar/> 
-        <div className="sections">
+        <section>
           <Home/>
           <Intro/>
           <Work/>
           <Contact/>
-        </div>
+        </section>
     </div>
   );
 }

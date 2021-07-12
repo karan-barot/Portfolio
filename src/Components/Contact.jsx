@@ -2,37 +2,35 @@ import React from 'react'
 
 export default function Contact() {
 
-
-    const palindrome = (str) =>{
-        
-        let s1 = str.split("").reverse().join("")
-        console.log(s1+" "+str)
-        if(s1===str){
-            console.log("palindrome")
-        }
-        else{
-            console.log("not palindrome")
-        }
-    }
-
-    palindrome("karan")
     return (
-        <div className="contact-container">
-            <form>
+        <div className="contact-container container">
+            <form >
                 <h1>Contact Me</h1>
-                <h6>Get in touch</h6>
-                <div className="form-container">
-                    <div className="form-left">
-                        <a>hello</a>
+                <div className="form-right">
+                    <h4>Contact Details</h4>
+                    <p><i className="uil uil-envelope"></i><span>karanbarot33344@gmail.com</span></p>
+                    <p><i className="uil uil-phone"></i><span>+1(437)-987-3077</span></p>
+                    <p><i className="uil uil-map-marker"></i><span>Toronto, ON</span></p>
+                </div>
+                <div className="form-left">
+                    <div className="form-group">
+                        <label>Name</label>
+                        <input type="text"/>
                     </div>
-                    <div className="form-right">
-                        <div className="name-field">
-                            <input type="text" placeholder="First Name"/>
-                            <input type="text" placeholder="Last Name"/>
-                        </div>
-                        <div className="email-field">
-                            <input type="text" placeholder="Email"/>
-                        </div>
+                    <div className="form-group">
+                        <label>Email</label>
+                        <input type="text"/>
+                    </div>
+                    <div className="form-group">
+                        <label>Subject</label>
+                        <input type="text"/>
+                    </div>
+                    <div className="form-group">
+                        <label>Message</label>
+                        <textarea></textarea>
+                    </div>
+                    <div className="form-group">
+                        <button type="submit">Send Message</button>
                     </div>
                 </div>
             </form>
